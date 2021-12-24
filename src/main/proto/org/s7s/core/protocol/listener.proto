@@ -1,0 +1,50 @@
+//============================================================================//
+//                                                                            //
+//            Copyright © 2015 - 2022 Sandpolis Software Foundation           //
+//                                                                            //
+//  This source file is subject to the terms of the Mozilla Public License    //
+//  version 2. You may not use this file except in compliance with the MPLv2. //
+//                                                                            //
+//============================================================================//
+syntax = "proto3";
+
+package core.instance;
+
+import "org/s7s/core/foundation/platform.proto";
+
+option java_package = "org.s7s.core.instance";
+option optimize_for = CODE_SIZE;
+
+message RQ_CreateListener {
+
+    // The listening address
+    string address = 1;
+
+    // The listening port
+    int32 port = 2;
+}
+
+enum RS_CreateListener {
+    CREATE_LISTENER_OK = 0;
+    CREATE_LISTENER_ACCESS_DENIED = 1;
+
+    CREATE_LISTENER_INVALID_PORT = 2;
+}
+
+message RQ_DeleteListener {
+
+}
+
+enum RS_DeleteListener {
+    DELETE_LISTENER_OK = 0;
+    DELETE_LISTENER_ACCESS_DENIED = 1;
+}
+
+message RQ_UpdateListener {
+
+}
+
+enum RS_UpdateListener {
+    UPDATE_LISTENER_OK = 0;
+    UPDATE_LISTENER_ACCESS_DENIED = 1;
+}

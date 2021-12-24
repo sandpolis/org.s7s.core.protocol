@@ -1,0 +1,57 @@
+//============================================================================//
+//                                                                            //
+//            Copyright © 2015 - 2022 Sandpolis Software Foundation           //
+//                                                                            //
+//  This source file is subject to the terms of the Mozilla Public License    //
+//  version 2. You may not use this file except in compliance with the MPLv2. //
+//                                                                            //
+//============================================================================//
+syntax = "proto3";
+
+package core.protocol;
+
+import "org/s7s/core/foundation/platform.proto";
+
+option java_package = "org.s7s.core.protocol";
+option optimize_for = SPEED;
+
+message RQ_CreateUser {
+
+    // The user's immutable username
+    string username = 1;
+
+    // The user's password
+    string password = 2;
+
+    string email = 3;
+    string phone = 4;
+    int64 expiration = 5;
+}
+
+enum RS_CreateUser {
+
+    CREATE_USER_OK = 0;
+    CREATE_USER_ACCESS_DENIED = 1;
+    CREATE_USER_INVALID_USERNAME = 2;
+    CREATE_USER_INVALID_PASSWORD = 3;
+    CREATE_USER_INVALID_EMAIL = 4;
+    CREATE_USER_INVALID_PHONE = 5;
+}
+
+message RQ_DeleteUser {
+    string username = 1;
+}
+
+enum RS_DeleteUser {
+    DELETE_USER_OK = 0;
+    DELETE_USER_ACCESS_DENIED = 1;
+}
+
+message RQ_UpdateUser {
+
+}
+
+enum RS_UpdateUser {
+    UPDATE_USER_OK = 0;
+    UPDATE_USER_ACCESS_DENIED = 1;
+}
