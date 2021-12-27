@@ -10,8 +10,6 @@ syntax = "proto3";
 
 package core.protocol;
 
-import "org/s7s/core/foundation/platform.proto";
-
 option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 

@@ -8,12 +8,11 @@
 //============================================================================//
 syntax = "proto3";
 
-package core.instance;
+package core.protocol;
 
 import "org/s7s/core/foundation/platform.proto";
-import "org/s7s/core/instance/auth.proto";
 
-option java_package = "org.s7s.core.instance";
+option java_package = "org.s7s.core.protocol";
 option optimize_for = CODE_SIZE;
 
 message AgentConfig {
@@ -80,14 +79,6 @@ message AgentConfig {
 
     // Installation paths. Keys are the enum numbers from OsType.
     map<int32, string> install_path = 10;
-
-    oneof authentication {
-        // Key authentication mechanism
-        KeyContainer key = 11;
-
-        // Password authentication mechanism
-        PasswordContainer password = 12;
-    }
 
     // If positive, the agent will poll the server at the configured interval
     // instead of maintaining a persistent connection.

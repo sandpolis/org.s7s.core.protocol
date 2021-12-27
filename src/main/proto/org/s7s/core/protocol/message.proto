@@ -8,9 +8,9 @@
 //============================================================================//
 syntax = "proto3";
 
-package core.net;
+package core.protocol;
 
-option java_package = "org.s7s.core.instance";
+option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 
 // A message type for all communication among instances.

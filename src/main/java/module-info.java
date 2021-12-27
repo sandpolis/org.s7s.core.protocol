@@ -6,20 +6,9 @@
 //  version 2. You may not use this file except in compliance with the MPLv2. //
 //                                                                            //
 //============================================================================//
-syntax = "proto3";
+open module org.s7s.core.protocol {
+	exports org.s7s.core.protocol;
 
-package core.protocol;
-
-option java_package = "org.s7s.core.protocol";
-option optimize_for = SPEED;
-
-enum ChannelTransportImplementation {
-    NIO = 0;
-    EPOLL = 1;
-    KQUEUE = 2;
-}
-
-enum ChannelTransportProtocol {
-    TCP = 0;
-    UDP = 1;
+	requires com.google.protobuf;
+	requires org.s7s.core.foundation;
 }
