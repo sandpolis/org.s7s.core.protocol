@@ -9,9 +9,15 @@
 
 plugins {
 	id("java-library")
+	kotlin("multiplatform") version "1.6.10"
 	id("org.s7s.build.module")
 	id("org.s7s.build.protobuf")
 	id("org.s7s.build.publish")
+}
+
+kotlin {
+	jvm()
+	linuxX64()
 }
 
 dependencies {
@@ -21,6 +27,6 @@ dependencies {
 	if (project.getParent() == null) {
 		implementation("org.s7s:core.foundation:+")
 	} else {
-		implementation(project(":core:org.s7s.core.foundation"))
+		implementation(project(":core:foundation"))
 	}
 }

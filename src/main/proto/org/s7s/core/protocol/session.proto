@@ -25,9 +25,6 @@ message RQ_Session {
 
     // The instance type of the requesting instance
     core.foundation.InstanceType instance_type = 2;
-
-    // The instance flavor of the requesting instance
-    core.foundation.InstanceFlavor instance_flavor = 3;
 }
 
 // Respond to a session request with a successful result.
