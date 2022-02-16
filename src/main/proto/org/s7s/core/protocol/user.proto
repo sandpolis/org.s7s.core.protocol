@@ -10,11 +10,12 @@ syntax = "proto3";
 
 package core.protocol;
 
-import "org/s7s/core/foundation/platform.proto";
-
 option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 
+// POST: /server/user
+//
+// Create a new user account.
 message RQ_CreateUser {
 
     // The user's immutable username
@@ -38,6 +39,9 @@ enum RS_CreateUser {
     CREATE_USER_INVALID_PHONE = 5;
 }
 
+// DELETE: /server/user
+//
+// Remove an existing user account.
 message RQ_DeleteUser {
     string username = 1;
 }
@@ -47,6 +51,9 @@ enum RS_DeleteUser {
     DELETE_USER_ACCESS_DENIED = 1;
 }
 
+// PUT: /server/user
+//
+// Update an existing user account.
 message RQ_UpdateUser {
 
 }

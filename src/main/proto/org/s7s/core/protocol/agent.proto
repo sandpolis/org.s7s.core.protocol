@@ -14,13 +14,17 @@ option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 
 // Request that the agent alter its power state.
-message RQ_ChangePowerState {
+message PostPowerRequest {
     enum PowerState {
         POWEROFF = 0;
         REBOOT = 1;
     }
 
     PowerState new_state = 1;
+}
+
+enum PostPowerResponse {
+    POST_POWER_OK = 0;
 }
 
 // Request that the boot agent be started.
@@ -53,14 +57,6 @@ message RQ_UninstallBootAgent {
 enum RS_UninstallBootAgent {
     UNINSTALL_BOOT_AGENT_OK = 0;
     UNINSTALL_BOOT_AGENT_ACCESS_DENIED = 1;
-}
-
-// Request to locate all installed boot agents.
-//
-// Sources      : client, server
-// Destinations : agent
-//
-message RQ_FindBootAgents {
 }
 
 // Response listing boot agent installations.
@@ -114,15 +110,6 @@ message RQ_InstallBootAgent {
 enum RS_InstallBootAgent {
     INSTALL_BOOT_AGENT_OK = 0;
     INSTALL_BOOT_AGENT_ACCESS_DENIED = 1;
-}
-
-// Request candidate partitions and devices that may be suitable for a boot
-// agent installation.
-//
-// Sources      : client, server
-// Destinations : agent
-//
-message RQ_FindBootAgentCandidates {
 }
 
 // Response listing boot agent installation candidates.

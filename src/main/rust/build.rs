@@ -4,7 +4,6 @@ fn main() -> Result<()> {
     prost_build::compile_protos(&[
         "src/main/proto/org/s7s/core/protocol/agent.proto",
         "src/main/proto/org/s7s/core/protocol/group.proto",
-        "src/main/proto/org/s7s/core/protocol/message.proto",
         "src/main/proto/org/s7s/core/protocol/network.proto",
         "src/main/proto/org/s7s/core/protocol/server.proto",
         "src/main/proto/org/s7s/core/protocol/session.proto",

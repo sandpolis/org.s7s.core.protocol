@@ -13,11 +13,8 @@ package core.protocol;
 option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 
-// Ping request.
-message RQ_Ping {}
-
 // Ping response.
-enum RS_Ping {
+enum GetPingResponse {
     PING_OK = 0;
 }
 

@@ -10,8 +10,6 @@ syntax = "proto3";
 
 package core.protocol;
 
-import "org/s7s/core/foundation/platform.proto";
-
 option java_package = "org.s7s.core.protocol";
 option optimize_for = CODE_SIZE;
 
@@ -54,7 +52,7 @@ message AgentConfig {
     bool strict_certs = 2;
 
     // Supported operating systems
-    repeated core.foundation.OsType supported_os = 3;
+    //repeated core.foundation.OsType supported_os = 3;
 
     // Supported system architectures
     repeated string supported_arch = 4;

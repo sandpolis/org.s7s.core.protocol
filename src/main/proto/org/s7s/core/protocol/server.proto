@@ -13,9 +13,6 @@ package core.protocol;
 option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 
-// Request for the server's banner
-message RQ_ServerBanner {}
-
 // Response bearing the server's banner
 message RS_ServerBanner {
 

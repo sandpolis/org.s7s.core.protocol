@@ -10,12 +10,10 @@ syntax = "proto3";
 
 package core.protocol;
 
-import "org/s7s/core/foundation/platform.proto";
-
 option java_package = "org.s7s.core.protocol";
 option optimize_for = CODE_SIZE;
 
-message RQ_CreateListener {
+message PostListenerRequest {
 
     // The listening address
     string address = 1;
@@ -24,27 +22,23 @@ message RQ_CreateListener {
     int32 port = 2;
 }
 
-enum RS_CreateListener {
+enum PostListenerResponse {
     CREATE_LISTENER_OK = 0;
     CREATE_LISTENER_ACCESS_DENIED = 1;
 
     CREATE_LISTENER_INVALID_PORT = 2;
 }
 
-message RQ_DeleteListener {
-
-}
-
-enum RS_DeleteListener {
+enum DeleteListenerResponse {
     DELETE_LISTENER_OK = 0;
     DELETE_LISTENER_ACCESS_DENIED = 1;
 }
 
-message RQ_UpdateListener {
+message PutListenerRequest {
 
 }
 
-enum RS_UpdateListener {
+enum PutListenerResponse {
     UPDATE_LISTENER_OK = 0;
     UPDATE_LISTENER_ACCESS_DENIED = 1;
 }
