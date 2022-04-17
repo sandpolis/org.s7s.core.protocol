@@ -14,9 +14,9 @@ option java_package = "org.s7s.core.protocol";
 option optimize_for = SPEED;
 
 // Response bearing the server's banner
-message RS_ServerBanner {
+message GetBannerResponse {
 
-    // Maintenance mode indicates that only superusers will be allowed to login
+    // Maintenance mode indicates that only admin users will be allowed to login
     bool maintenance = 1;
 
     // The 3-field version of the server

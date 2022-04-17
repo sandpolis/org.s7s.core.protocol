@@ -7,6 +7,7 @@ fn main() -> Result<()> {
         "src/main/proto/org/s7s/core/protocol/network.proto",
         "src/main/proto/org/s7s/core/protocol/server.proto",
         "src/main/proto/org/s7s/core/protocol/session.proto",
+        "src/main/proto/org/s7s/core/protocol/user.proto",
         "src/main/proto/org/s7s/core/protocol/stream.proto"
     ], &["src/main/proto/"])?;
 

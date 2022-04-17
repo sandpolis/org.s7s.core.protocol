@@ -96,10 +96,6 @@ enum RS_CreateGroup {
     CREATE_GROUP_FAILED_ACCESS_DENIED = 1;
 }
 
-message RQ_DeleteGroup {
-
-}
-
 enum RS_DeleteGroup {
     DELETE_GROUP_OK = 0;
     DELETE_GROUP_FAILED_ACCESS_DENIED = 1;
